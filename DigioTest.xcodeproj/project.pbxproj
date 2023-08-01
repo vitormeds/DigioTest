@@ -33,6 +33,9 @@
 		F4DF01282A787D2B00400924 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF011A2A787D2A00400924 /* Coordinator.swift */; };
 		F4F842822A7935260034F504 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842812A7935260034F504 /* HeaderView.swift */; };
 		F4F842862A7938770034F504 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842852A7938770034F504 /* Assets+Generated.swift */; };
+		F4F842892A79841C0034F504 /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842882A79841C0034F504 /* SpotlightTableViewCell.swift */; };
+		F4F8428B2A7984250034F504 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8428A2A7984250034F504 /* ProductsTableViewCell.swift */; };
+		F4F8428D2A79842D0034F504 /* CashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8428C2A79842D0034F504 /* CashTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		F4DF011A2A787D2A00400924 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F4F842812A7935260034F504 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F4F842852A7938770034F504 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		F4F842882A79841C0034F504 /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
+		F4F8428A2A7984250034F504 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		F4F8428C2A79842D0034F504 /* CashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +311,7 @@
 		F4DF01062A787D2A00400924 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4F842872A79840F0034F504 /* Cells */,
 				F4F842812A7935260034F504 /* HeaderView.swift */,
 				F427AA162A7884AD0087D2A8 /* HomeView.swift */,
 				F4DF010A2A787D2A00400924 /* HomeViewController.swift */,
@@ -327,6 +334,16 @@
 				F4DF011A2A787D2A00400924 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F4F842872A79840F0034F504 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F4F842882A79841C0034F504 /* SpotlightTableViewCell.swift */,
+				F4F8428A2A7984250034F504 /* ProductsTableViewCell.swift */,
+				F4F8428C2A79842D0034F504 /* CashTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,11 +629,14 @@
 				F4F842862A7938770034F504 /* Assets+Generated.swift in Sources */,
 				F45161112A7879D100292DFF /* AppDelegate.swift in Sources */,
 				F427AA172A7884AD0087D2A8 /* HomeView.swift in Sources */,
+				F4F8428B2A7984250034F504 /* ProductsTableViewCell.swift in Sources */,
 				F4DF01242A787D2B00400924 /* HomeService.swift in Sources */,
+				F4F842892A79841C0034F504 /* SpotlightTableViewCell.swift in Sources */,
 				F4DF01272A787D2B00400924 /* MainCoordinator.swift in Sources */,
 				F427AA0F2A7881F00087D2A8 /* DetailViewModel.swift in Sources */,
 				F4DF01282A787D2B00400924 /* Coordinator.swift in Sources */,
 				F427AA102A7881F00087D2A8 /* DetailViewController.swift in Sources */,
+				F4F8428D2A79842D0034F504 /* CashTableViewCell.swift in Sources */,
 				F427AA152A7883AA0087D2A8 /* Strings+Generated.swift in Sources */,
 				F4DF011C2A787D2B00400924 /* Spacing.swift in Sources */,
 				F4DF011B2A787D2B00400924 /* NetworkService.swift in Sources */,

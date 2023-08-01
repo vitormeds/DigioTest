@@ -20,6 +20,9 @@ class HomeView: UIView {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.separatorStyle = .none
         return tableView
     }()
     override init(frame: CGRect) {
