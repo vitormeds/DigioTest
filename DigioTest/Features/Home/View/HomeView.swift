@@ -17,6 +17,11 @@ class HomeView: UIView {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         return headerView
     }()
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -28,10 +33,18 @@ class HomeView: UIView {
         backgroundColor = UIColor.white
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(headerView)
+        addSubview(tableView)
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: topAnchor),
             headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: Size.headerSize)
+        ])
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: Spacing.normalSpacing),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

@@ -33,19 +33,21 @@ class HeaderView: UIView {
         fatalError("Identifier has not been implemeted")
     }
     func setupViews() {
-        backgroundColor = UIColor.blue
+        backgroundColor = UIColor.white
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(iconImageView)
         addSubview(titleLabel)
         NSLayoutConstraint.activate([
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Spacing.smallSpacing),
+            iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                                   constant: Spacing.smallSpacing),
             iconImageView.widthAnchor.constraint(equalToConstant: Size.iconSize),
             iconImageView.heightAnchor.constraint(equalToConstant: Size.iconSize)
         ])
         NSLayoutConstraint.activate([
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Spacing.smallSpacing),
+            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor,
+                                                constant: Spacing.smallSpacing),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
