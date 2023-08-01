@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  DigioTest
+
+  Created by Vitor Mendes on 31/07/23.
+  
+*/
+
+// Utils
+"Utils.back" = "Voltar";

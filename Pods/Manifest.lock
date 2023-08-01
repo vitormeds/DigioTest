@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: e40231df9f509541cc62dab61817977fce8b6532
+PODS:
+  - Alamofire (5.7.1)
+  - lottie-ios (4.2.0)
+  - Nuke (10.7.1)
+
+DEPENDENCIES:
+  - Alamofire (= 5.7.1)
+  - lottie-ios
+  - Nuke (= 10.7.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - lottie-ios
+    - Nuke
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  Nuke: 279f17a599fd1c83cf51de5e0e1f2db143a287b0
+
+PODFILE CHECKSUM: 80ef84f3b570289ef3b95103f1190804217574a0
 
 COCOAPODS: 1.12.1
