@@ -9,6 +9,15 @@ import UIKit
 import Nuke
 
 class SpotlightCollectionViewCell: UICollectionViewCell {
+    let conteinerView: UIView = {
+        let conteinerView = UIView()
+        conteinerView.translatesAutoresizingMaskIntoConstraints = false
+        conteinerView.backgroundColor = UIColor.white
+        conteinerView.layer.masksToBounds = true
+        conteinerView.layer.cornerRadius = 15
+        conteinerView.dropShadow()
+        return conteinerView
+    }()
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -23,13 +32,19 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        addSubview(imageView)
-        
+        contentView.addSubview(conteinerView)
+        conteinerView.addSubview(imageView)
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: Spacing.normalSpacing),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Spacing.normalSpacing),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Spacing.normalSpacing),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            conteinerView.topAnchor.constraint(equalTo: topAnchor),
+            conteinerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Spacing.normalSpacing),
+            conteinerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Spacing.normalSpacing),
+            conteinerView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: conteinerView.bottomAnchor),
+            imageView.topAnchor.constraint(equalTo: conteinerView.topAnchor)
         ])
     }
     
@@ -44,4 +59,5 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 

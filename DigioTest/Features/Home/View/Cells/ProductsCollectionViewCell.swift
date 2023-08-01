@@ -9,11 +9,18 @@ import UIKit
 import Nuke
 
 class ProductsCollectionViewCell: UICollectionViewCell {
+    let conteinerView: UIView = {
+        let conteinerView = UIView()
+        conteinerView.translatesAutoresizingMaskIntoConstraints = false
+        conteinerView.backgroundColor = UIColor.white
+        conteinerView.layer.masksToBounds = true
+        conteinerView.layer.cornerRadius = 15
+        conteinerView.dropShadow()
+        return conteinerView
+    }()
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = 15
         return imageView
     }()
     override func prepareForReuse() {
@@ -23,13 +30,19 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        addSubview(imageView)
-        
+        contentView.addSubview(conteinerView)
+        conteinerView.addSubview(imageView)
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Spacing.normalSpacing),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Spacing.normalSpacing),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            conteinerView.topAnchor.constraint(equalTo: topAnchor),
+            conteinerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Spacing.normalSpacing),
+            conteinerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Spacing.normalSpacing),
+            conteinerView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        NSLayoutConstraint.activate([
+            imageView.centerYAnchor.constraint(equalTo: conteinerView.centerYAnchor),
+            imageView.centerXAnchor.constraint(equalTo: conteinerView.centerXAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: Size.productSize),
+            imageView.heightAnchor.constraint(equalToConstant: Size.productSize)
         ])
     }
     

@@ -10,6 +10,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum DigioTestStrings {
+  internal enum Cash {
+    /// digio Cash
+    internal static let title = DigioTestStrings.tr("Localizable", "Cash.title", fallback: "digio Cash")
+    /// Cash
+    internal static let titleCashColor = DigioTestStrings.tr("Localizable", "Cash.titleCashColor", fallback: "Cash")
+    /// Digio
+    internal static let titleDigioColor = DigioTestStrings.tr("Localizable", "Cash.titleDigioColor", fallback: "Digio")
+  }
   internal enum Header {
     /// Localizable.strings
     ///   DigioTest

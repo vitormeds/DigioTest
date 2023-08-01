@@ -9,6 +9,11 @@
 // Header
 "Header.title" = "Olá, %@";
 
+// Digio Cash
+"Cash.title" = "digio Cash";
+"Cash.titleCashColor" = "Cash";
+"Cash.titleDigioColor" = "Digio";
+
 // Utils
 "Utils.back" = "Voltar";
 "Utils.homeApi" = "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/";

@@ -40,15 +40,25 @@ class CashTableViewCell: UITableViewCell {
             cashImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Spacing.normalSpacing),
             cashImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacing.normalSpacing),
             cashImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            cashImageView.heightAnchor.constraint(equalToConstant: Size.cardSize)
+            cashImageView.heightAnchor.constraint(equalToConstant: Size.cardCashSize)
         ])
     }
     func setup(cash: Cash) {
-        titleLabel.text = "digio Cash"
+        setupText()
         if let urlImg: URL = URL(string: cash.bannerURL) {
             let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
             Nuke.loadImage(with: request!, into: cashImageView)
         }
+    }
+    func setupText() {
+        let rangeDigio = (DigioTestStrings.Cash.title as NSString).range(of: DigioTestStrings.Cash.titleDigioColor)
+        let rangeCash = (DigioTestStrings.Cash.title as NSString).range(of: DigioTestStrings.Cash.titleCashColor)
+        let attributedString = NSMutableAttributedString(string: DigioTestStrings.Cash.title)
+        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 18), range: rangeDigio)
+        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 18), range: rangeCash)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: rangeDigio)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.gray, range: rangeCash)
+        titleLabel.attributedText = attributedString
     }
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
