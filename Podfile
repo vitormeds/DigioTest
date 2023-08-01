@@ -9,6 +9,7 @@ target 'DigioTest' do
   pod 'Nuke', '10.7.1'
   pod 'lottie-ios'
   pod 'SwiftLint'
+  pod 'SwiftGen', '~> 6.0'
   
   # Pods for DigioTest
 
