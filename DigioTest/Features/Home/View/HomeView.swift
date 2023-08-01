@@ -9,6 +9,8 @@ import UIKit
 
 protocol HomeControllerToViewDelegate: AnyObject {
     func setupValues(name: String)
+    func setupLoading(play: Bool)
+    func reloadView()
 }
 
 class HomeView: UIView {
@@ -55,5 +57,11 @@ class HomeView: UIView {
 extension HomeView: HomeControllerToViewDelegate {
     func setupValues(name: String) {
         headerView.setupValues(name: name)
+    }
+    func setupLoading(play: Bool) {
+        /* TODO */
+    }
+    func reloadView() {
+        tableView.reloadData()
     }
 }

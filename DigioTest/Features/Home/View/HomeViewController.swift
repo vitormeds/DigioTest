@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
         delegateToView.setupValues(name: "Maria")
     }
     func getHomeData() {
+        delegateToView.setupLoading(play: true)
         viewModel.getHomeData()
     }
     func setupViews() {
@@ -58,10 +59,11 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewModelToViewDelegate {
     func loadSucess() {
-
+        delegateToView.setupLoading(play: false)
+        delegateToView.reloadView()
     }
     func loadError(error: Error) {
-
+        delegateToView.setupLoading(play: false)
     }
 }
 
