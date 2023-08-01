@@ -7,12 +7,11 @@
 
 import UIKit
 
-protocol MainCoordinatorDelegate {
+protocol MainCoordinatorDelegate: AnyObject {
     func openDetail(homeData: HomeData)
 }
 
 class MainCoordinator: Coordinator {
-    
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -21,20 +20,19 @@ class MainCoordinator: Coordinator {
 
     func start() {
         let viewModel = HomeViewModel(homeService: HomeService(), coordinatorDelegate: self)
-        let vc = HomeViewController(viewModel: viewModel)
-        viewModel.homeViewDelegate = vc
-        navigationController.pushViewController(vc, animated: true)
+        let viewController = HomeViewController(viewModel: viewModel)
+        viewModel.homeViewDelegate = viewController
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
 extension MainCoordinator: MainCoordinatorDelegate {
-    
     func openDetail(homeData: HomeData) {
         let backButton = UIBarButtonItem()
         backButton.title = DigioTestStrings.Utils.back
         navigationController.navigationBar.topItem?.backBarButtonItem = backButton
         let viewModel = DetailViewModel(homeData: homeData)
-        let vc = DetailViewController(viewModel: viewModel)
-        navigationController.pushViewController(vc, animated: true)
+        let viewController = DetailViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

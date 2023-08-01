@@ -7,36 +7,30 @@
 
 import UIKit
 
-protocol HomeControllerToViewDelegate {
+protocol HomeControllerToViewDelegate: AnyObject {
     func setupLoading(play: Bool)
     func reloadView()
 }
 
 class HomeView: UIView {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("Identifier has not been implemeted")
     }
-    
-    func setupViews()
-    {
+    func setupViews() {
         backgroundColor = UIColor.blue
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
 
 extension HomeView: HomeControllerToViewDelegate {
-    
     func setupLoading(play: Bool) {
-        
+        /* TODO */
     }
-    
     func reloadView() {
-
+        /* TODO */
     }
 }

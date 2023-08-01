@@ -7,13 +7,12 @@
 
 import Foundation
 
-protocol DetailViewModelDelegate {
+protocol DetailViewModelDelegate: AnyObject {
 }
 
 class DetailViewModel: DetailViewModelDelegate {
 
     let homeData: HomeData
-    
     init(homeData: HomeData) {
         self.homeData = homeData
     }

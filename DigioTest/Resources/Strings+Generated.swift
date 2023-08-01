@@ -16,6 +16,8 @@ internal enum DigioTestStrings {
     /// 
     ///   Created by Vitor Mendes on 31/07/23.
     internal static let back = DigioTestStrings.tr("Localizable", "Utils.back", fallback: "Voltar")
+    /// https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/
+    internal static let homeApi = DigioTestStrings.tr("Localizable", "Utils.homeApi", fallback: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

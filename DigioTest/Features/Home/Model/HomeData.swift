@@ -34,4 +34,3 @@ struct Spotlight: Codable {
     let bannerURL: String
     let description: String
 }
-

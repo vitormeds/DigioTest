@@ -335,6 +335,7 @@
 				F451610A2A7879D100292DFF /* Frameworks */,
 				F451610B2A7879D100292DFF /* Resources */,
 				8D272A41FA574F9DA4B6EA58 /* [CP] Embed Pods Frameworks */,
+				F4A4E59E2A78891200753125 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -554,6 +555,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigioTest-DigioTestUITests/Pods-DigioTest-DigioTestUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F4A4E59E2A78891200753125 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

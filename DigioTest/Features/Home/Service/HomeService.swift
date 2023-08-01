@@ -7,17 +7,18 @@
 
 import Foundation
 
-protocol HomeServiceDelegate {
-    func getHomeData(sucess: @escaping (HomeData)-> Void, error: @escaping (Error)-> Void)
+protocol HomeServiceDelegate: AnyObject {
+    func getHomeData(sucess: @escaping (HomeData) -> Void, error: @escaping (Error) -> Void)
 }
 
 class HomeService: HomeServiceDelegate {
-    
-    func getHomeData(sucess: @escaping (HomeData)-> Void, error: @escaping (Error)-> Void) {
-        NetworkService.request(url: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/", method: .get, obj: HomeData.self) { result in
+    func getHomeData(sucess: @escaping (HomeData) -> Void, error: @escaping (Error) -> Void) {
+        NetworkService.request(requestUrl: DigioTestStrings.Utils.homeApi,
+                               method: .get,
+                               object: HomeData.self) { result in
             sucess(result)
-        } error: { e in
-            error(e)
+        } error: { requestError in
+            error(requestError)
         }
     }
 }

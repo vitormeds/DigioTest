@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol HomeViewModelDelegate {
+protocol HomeViewModelDelegate: AnyObject {
     func getHomeData()
     var homeData: HomeData? { get set }
     func openDetail(homeData: HomeData)
 }
 
-protocol HomeViewModelToViewDelegate {
+protocol HomeViewModelToViewDelegate: AnyObject {
     func loadSucess()
     func loadError(error: Error)
 }
@@ -24,21 +24,18 @@ class HomeViewModel: HomeViewModelDelegate {
     var homeViewDelegate: HomeViewModelToViewDelegate?
     var coordinatorDelegate: MainCoordinatorDelegate?
     var homeData: HomeData?
-    
     init(homeService: HomeServiceDelegate, coordinatorDelegate: MainCoordinatorDelegate) {
         self.homeService = homeService
         self.coordinatorDelegate = coordinatorDelegate
     }
-    
     func getHomeData() {
         homeService.getHomeData { result in
             self.homeData = result
             self.homeViewDelegate?.loadSucess()
-        } error: { e in
-            self.homeViewDelegate?.loadError(error: e)
+        } error: { error in
+            self.homeViewDelegate?.loadError(error: error)
         }
     }
-    
     func openDetail(homeData: HomeData) {
         coordinatorDelegate?.openDetail(homeData: homeData)
     }

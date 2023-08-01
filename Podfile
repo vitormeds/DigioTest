@@ -8,6 +8,7 @@ target 'DigioTest' do
   pod 'Alamofire', '5.7.1'
   pod 'Nuke', '10.7.1'
   pod 'lottie-ios'
+  pod 'SwiftLint'
   
   # Pods for DigioTest
 
