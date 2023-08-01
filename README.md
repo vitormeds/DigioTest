@@ -2,11 +2,9 @@
 
 Arquitetura
 
-A arquitetura utilizada no projeto foi definida como MVVM-C
+A arquitetura utilizada no projeto foi definida como MVVM-C, onde e possivel visualizar as camadas Model, ViewModel, View e Coordinator sendo o papel delas:
 
 ![Diagrama sem nome](https://github.com/vitormeds/DigioTest/assets/12155092/8c78a44c-49bb-413b-ac3c-6fff439e2ce8)
-
-Onde e possivel visualizar as camadas Model, ViewModel, View e Coordinator sendo o papel delas:
 
 Model: Representa os dados do aplicativos.
 ViewModel:  Atua como um intermediário entre a visualização e o modelo de dados, recupera dados do modelo de dados e os transforma em um formato que pode ser facilmente exibido pela exibição.
