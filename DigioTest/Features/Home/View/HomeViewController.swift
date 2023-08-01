@@ -75,25 +75,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let homeData = viewModel.homeData else {
+            return UITableViewCell()
+        }
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: SpotlightTableViewCell.description()) as! SpotlightTableViewCell
+            cell.setup(spotlights: homeData.spotlight ?? [])
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(
-                withIdentifier: ProductsTableViewCell.description()) as! ProductsTableViewCell
+                withIdentifier: CashTableViewCell.description()) as! CashTableViewCell
+            cell.setup(cash: homeData.cash)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(
-                withIdentifier: CashTableViewCell.description()) as! CashTableViewCell
+                withIdentifier: ProductsTableViewCell.description()) as! ProductsTableViewCell
+            cell.setup(products: homeData.products)
             return cell
         default:
             return UITableViewCell()
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

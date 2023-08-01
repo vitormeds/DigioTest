@@ -13,4 +13,5 @@ enum Size {
     static let loadingSize: CGFloat = 120
     static let iconSize: CGFloat = 32
     static let headerSize: CGFloat = 42
+    static let cardSize: CGFloat = 200
 }

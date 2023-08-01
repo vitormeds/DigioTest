@@ -25,6 +25,7 @@ class HomeView: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         return tableView
     }()
     override init(frame: CGRect) {
@@ -46,7 +47,7 @@ class HomeView: UIView {
             headerView.heightAnchor.constraint(equalToConstant: Size.headerSize)
         ])
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: Spacing.normalSpacing),
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)

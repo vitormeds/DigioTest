@@ -36,6 +36,8 @@
 		F4F842892A79841C0034F504 /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842882A79841C0034F504 /* SpotlightTableViewCell.swift */; };
 		F4F8428B2A7984250034F504 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8428A2A7984250034F504 /* ProductsTableViewCell.swift */; };
 		F4F8428D2A79842D0034F504 /* CashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8428C2A79842D0034F504 /* CashTableViewCell.swift */; };
+		F4F8428F2A79A3550034F504 /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8428E2A79A3550034F504 /* SpotlightCollectionViewCell.swift */; };
+		F4F842932A79BA600034F504 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842922A79BA600034F504 /* ProductsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		F4F842882A79841C0034F504 /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
 		F4F8428A2A7984250034F504 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		F4F8428C2A79842D0034F504 /* CashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTableViewCell.swift; sourceTree = "<group>"; };
+		F4F8428E2A79A3550034F504 /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4F842922A79BA600034F504 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,7 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				F4F842882A79841C0034F504 /* SpotlightTableViewCell.swift */,
+				F4F8428E2A79A3550034F504 /* SpotlightCollectionViewCell.swift */,
 				F4F8428A2A7984250034F504 /* ProductsTableViewCell.swift */,
+				F4F842922A79BA600034F504 /* ProductsCollectionViewCell.swift */,
 				F4F8428C2A79842D0034F504 /* CashTableViewCell.swift */,
 			);
 			path = Cells;
@@ -629,6 +635,7 @@
 				F4F842862A7938770034F504 /* Assets+Generated.swift in Sources */,
 				F45161112A7879D100292DFF /* AppDelegate.swift in Sources */,
 				F427AA172A7884AD0087D2A8 /* HomeView.swift in Sources */,
+				F4F8428F2A79A3550034F504 /* SpotlightCollectionViewCell.swift in Sources */,
 				F4F8428B2A7984250034F504 /* ProductsTableViewCell.swift in Sources */,
 				F4DF01242A787D2B00400924 /* HomeService.swift in Sources */,
 				F4F842892A79841C0034F504 /* SpotlightTableViewCell.swift in Sources */,
@@ -643,6 +650,7 @@
 				F4DF011D2A787D2B00400924 /* Size.swift in Sources */,
 				F4DF011E2A787D2B00400924 /* HomeViewModel.swift in Sources */,
 				F45161132A7879D100292DFF /* SceneDelegate.swift in Sources */,
+				F4F842932A79BA600034F504 /* ProductsCollectionViewCell.swift in Sources */,
 				F4F842822A7935260034F504 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
