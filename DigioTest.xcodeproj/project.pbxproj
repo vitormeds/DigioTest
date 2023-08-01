@@ -31,6 +31,8 @@
 		F4DF01242A787D2B00400924 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF010C2A787D2A00400924 /* HomeService.swift */; };
 		F4DF01272A787D2B00400924 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF01192A787D2A00400924 /* MainCoordinator.swift */; };
 		F4DF01282A787D2B00400924 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF011A2A787D2A00400924 /* Coordinator.swift */; };
+		F4F842822A7935260034F504 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842812A7935260034F504 /* HeaderView.swift */; };
+		F4F842862A7938770034F504 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F842852A7938770034F504 /* Assets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		F4DF010C2A787D2A00400924 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		F4DF01192A787D2A00400924 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F4DF011A2A787D2A00400924 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F4F842812A7935260034F504 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F4F842852A7938770034F504 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		F427AA112A7883670087D2A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4F842852A7938770034F504 /* Assets+Generated.swift */,
 				F427AA142A7883AA0087D2A8 /* Strings+Generated.swift */,
 				F427AA122A7883790087D2A8 /* Localizable.strings */,
 			);
@@ -300,6 +305,7 @@
 		F4DF01062A787D2A00400924 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4F842812A7935260034F504 /* HeaderView.swift */,
 				F427AA162A7884AD0087D2A8 /* HomeView.swift */,
 				F4DF010A2A787D2A00400924 /* HomeViewController.swift */,
 			);
@@ -603,6 +609,7 @@
 			files = (
 				F4DF01232A787D2B00400924 /* HomeViewController.swift in Sources */,
 				F4DF011F2A787D2B00400924 /* HomeData.swift in Sources */,
+				F4F842862A7938770034F504 /* Assets+Generated.swift in Sources */,
 				F45161112A7879D100292DFF /* AppDelegate.swift in Sources */,
 				F427AA172A7884AD0087D2A8 /* HomeView.swift in Sources */,
 				F4DF01242A787D2B00400924 /* HomeService.swift in Sources */,
@@ -616,6 +623,7 @@
 				F4DF011D2A787D2B00400924 /* Size.swift in Sources */,
 				F4DF011E2A787D2B00400924 /* HomeViewModel.swift in Sources */,
 				F45161132A7879D100292DFF /* SceneDelegate.swift in Sources */,
+				F4F842822A7935260034F504 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

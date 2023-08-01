@@ -26,9 +26,9 @@ class HomeViewController: UIViewController {
         view.backgroundColor = UIColor.white
         setupViews()
         getHomeData()
+        delegateToView.setupValues(name: "Maria")
     }
     func getHomeData() {
-        delegateToView.setupLoading(play: true)
         viewModel.getHomeData()
     }
     func setupViews() {

@@ -2,7 +2,7 @@ strings:
   inputs: 
     - DigioTest/Resources/Localizable.strings
   outputs:
-    - templateName: structured-swift5
+    - templateName: structured-swift4
       output: DigioTest/Resources/Strings+Generated.swift
       params:
         enumName: DigioTestStrings
@@ -11,7 +11,7 @@ xcassets:
   inputs:
     - DigioTest/Assets.xcassets
   outputs:
-    - templateName: swift5
-      output: Assets+Generated.swift
+    - templateName: swift4
+      output: DigioTest/Resources/Assets+Generated.swift
       params:
         enumName: DigioTestAssets

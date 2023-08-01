@@ -10,11 +10,17 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum DigioTestStrings {
-  internal enum Utils {
+  internal enum Header {
     /// Localizable.strings
     ///   DigioTest
     /// 
     ///   Created by Vitor Mendes on 31/07/23.
+    internal static func title(_ p1: Any) -> String {
+      return DigioTestStrings.tr("Localizable", "Header.title", String(describing: p1), fallback: "Olá, %@")
+    }
+  }
+  internal enum Utils {
+    /// Voltar
     internal static let back = DigioTestStrings.tr("Localizable", "Utils.back", fallback: "Voltar")
     /// https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/
     internal static let homeApi = DigioTestStrings.tr("Localizable", "Utils.homeApi", fallback: "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/")
