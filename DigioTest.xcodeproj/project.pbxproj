@@ -20,7 +20,6 @@
 		F451611A2A7879D200292DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45161192A7879D200292DFF /* Assets.xcassets */; };
 		F451611D2A7879D200292DFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F451611B2A7879D200292DFF /* LaunchScreen.storyboard */; };
 		F45161322A7879D200292DFF /* DigioTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161312A7879D200292DFF /* DigioTestUITests.swift */; };
-		F45161342A7879D200292DFF /* DigioTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */; };
 		F4AEF4412A7A927000E4633E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F4AEF4402A7A927000E4633E /* loading.json */; };
 		F4AEF4442A7AB50100E4633E /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4432A7AB50100E4633E /* CustomModalViewController.swift */; };
 		F4AEF4462A7ACE3500E4633E /* ProductAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */; };
@@ -90,7 +89,6 @@
 		F45161232A7879D200292DFF /* DigioTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F451612D2A7879D200292DFF /* DigioTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45161312A7879D200292DFF /* DigioTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestUITests.swift; sourceTree = "<group>"; };
-		F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4AEF4402A7A927000E4633E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		F4AEF4432A7AB50100E4633E /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAdapter.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				F45161312A7879D200292DFF /* DigioTestUITests.swift */,
-				F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */,
 			);
 			path = DigioTestUITests;
 			sourceTree = "<group>";
@@ -728,7 +725,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45161322A7879D200292DFF /* DigioTestUITests.swift in Sources */,
-				F45161342A7879D200292DFF /* DigioTestUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
