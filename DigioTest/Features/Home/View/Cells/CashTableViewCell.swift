@@ -53,7 +53,11 @@ class CashTableViewCell: UITableViewCell {
         setupText()
         if let urlImg: URL = URL(string: cash.bannerURL) {
             let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
-            Nuke.loadImage(with: request!, into: cashImageView)
+            let options = ImageLoadingOptions(
+                placeholder: DigioTestAssets.noImageIcon.image,
+                transition: .fadeIn(duration: 0.33)
+            )
+            Nuke.loadImage(with: request!, options: options, into: cashImageView)
         }
         self.openDetail = openDetail
         let tapAction = UITapGestureRecognizer(target: self, action: #selector(self.tapAction))

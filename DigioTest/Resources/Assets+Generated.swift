@@ -23,6 +23,7 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 internal enum DigioTestAssets {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let digioIcon = ImageAsset(name: "digioIcon")
+  internal static let noImageIcon = ImageAsset(name: "noImageIcon")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

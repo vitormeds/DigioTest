@@ -204,7 +204,11 @@ extension DetailView: DetailViewToViewDelegate {
         setupContraints()
         if let urlImg: URL = URL(string: product.imageURL) {
             let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
-            Nuke.loadImage(with: request!, into: productImageView)
+            let options = ImageLoadingOptions(
+                placeholder: DigioTestAssets.noImageIcon.image,
+                transition: .fadeIn(duration: 0.33)
+            )
+            Nuke.loadImage(with: request!, options: options, into: productImageView)
         }
         switch product.type {
         case .cash:
