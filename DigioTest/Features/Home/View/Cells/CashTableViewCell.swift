@@ -33,13 +33,18 @@ class CashTableViewCell: UITableViewCell {
         contentView.addSubview(cashImageView)
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Spacing.normalSpacing),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Spacing.normalSpacing),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacing.normalSpacing)
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,
+                                                 constant: -Spacing.normalSpacing),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
+                                                constant: Spacing.normalSpacing)
         ])
         NSLayoutConstraint.activate([
-            cashImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Spacing.normalSpacing),
-            cashImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Spacing.normalSpacing),
-            cashImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacing.normalSpacing),
+            cashImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
+                                               constant: Spacing.normalSpacing),
+            cashImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,
+                                                    constant: -Spacing.normalSpacing),
+            cashImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
+                                                   constant: Spacing.normalSpacing),
             cashImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             cashImageView.heightAnchor.constraint(equalToConstant: Size.cardCashSize)
         ])
@@ -55,8 +60,10 @@ class CashTableViewCell: UITableViewCell {
         addGestureRecognizer(tapAction)
     }
     func setupText() {
-        let rangeDigio = (DigioTestStrings.Cash.title as NSString).range(of: DigioTestStrings.Cash.titleDigioColor)
-        let rangeCash = (DigioTestStrings.Cash.title as NSString).range(of: DigioTestStrings.Cash.titleCashColor)
+        let rangeDigio = (DigioTestStrings.Cash.title as NSString)
+            .range(of: DigioTestStrings.Cash.titleDigioColor)
+        let rangeCash = (DigioTestStrings.Cash.title as NSString)
+            .range(of: DigioTestStrings.Cash.titleCashColor)
         let attributedString = NSMutableAttributedString(string: DigioTestStrings.Cash.title)
         attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 18), range: rangeDigio)
         attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 18), range: rangeCash)
