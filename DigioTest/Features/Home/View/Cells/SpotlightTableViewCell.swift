@@ -70,7 +70,7 @@ extension SpotlightTableViewCell: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (window?.screen.bounds.width ?? 0) - Spacing.bigSpacing, height: Size.cardSize)
+        return CGSize(width: (window?.screen.bounds.width ?? 300) - Spacing.bigSpacing, height: Size.cardSize)
     }
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {

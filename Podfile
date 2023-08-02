@@ -4,7 +4,6 @@
 target 'DigioTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  use_frameworks!
   pod 'Alamofire', '5.7.1'
   pod 'Nuke', '10.7.1'
   pod 'lottie-ios'
@@ -15,6 +14,7 @@ target 'DigioTest' do
 
   target 'DigioTestTests' do
     inherit! :search_paths
+    pod 'iOSSnapshotTestCase', '8.0.0'
     # Pods for testing
   end
 

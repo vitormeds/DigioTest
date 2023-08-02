@@ -15,18 +15,24 @@ class HomeServiceMock: HomeServiceDelegate {
         spotlight:
             [
                 Spotlight(name: "NameS",
-                          bannerURL: "bannerURLS",
+                          bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/recharge_banner.png",
+                          description: "descriptionS"),
+                Spotlight(name: "NameS",
+                          bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/recharge_banner.png",
                           description: "descriptionS")
             ],
         products:
             [
                 Product(name: "nameP",
-                        imageURL: "imageURLP",
+                        imageURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/xbox_icon.png",
+                        description: "descriptionP"),
+                Product(name: "nameP",
+                        imageURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/xbox_icon.png",
                         description: "descriptionP")
             ],
         cash:
             Cash(title: "titleC",
-                 bannerURL: "bannerURLC",
+                 bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/cash_banner.png",
                  description: "descriptionC"))
     
     func getHomeData(sucess: @escaping (HomeData) -> Void, error: @escaping (Error) -> Void) {
