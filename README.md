@@ -1,6 +1,6 @@
 ## DigioTest
 
- 
+![DigioTest](https://github.com/vitormeds/DigioTest/assets/12155092/d6f19377-76cd-4088-94c7-9c1e5ccce5e7)
 
 ## Arquitetura
 
@@ -41,6 +41,9 @@ Responsavel por fazer a verificaçao da qualidade da escrita do codigo
 
 Gera classes para facilitar o acesso a Strings localizadas e Assets do projeto
 
+## Observações
+
+Para executar os testes de Snapshot utilize o emulador do iPhone 14 Pro Max e iOS 16.4, que e o modelo usado para gerar as imagens de referencia
 
 
 
