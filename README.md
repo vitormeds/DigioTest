@@ -6,7 +6,8 @@
 
 A arquitetura utilizada no projeto foi definida como MVVM-C. Segue esquema das camadas da arquitetura, sendo elas Model, ViewModel, View e Coordinator:
 
-![Diagrama sem nome](https://github.com/vitormeds/DigioTest/assets/12155092/8c78a44c-49bb-413b-ac3c-6fff439e2ce8)
+![Diagrama sem nome drawio](https://github.com/vitormeds/DigioTest/assets/12155092/1ba466ec-675a-4d17-bdf1-193e1117531f)
+
 
 **Model**: Representa os dados do aplicativos.
 
