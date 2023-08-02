@@ -34,10 +34,10 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(conteinerView)
         conteinerView.addSubview(imageView)
         NSLayoutConstraint.activate([
-            conteinerView.topAnchor.constraint(equalTo: topAnchor),
+            conteinerView.topAnchor.constraint(equalTo: topAnchor, constant: Spacing.normalSpacing),
             conteinerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Spacing.normalSpacing),
             conteinerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Spacing.normalSpacing),
-            conteinerView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            conteinerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Spacing.normalSpacing)
         ])
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor),

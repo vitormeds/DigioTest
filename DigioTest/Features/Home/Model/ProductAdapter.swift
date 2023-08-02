@@ -8,13 +8,11 @@
 import Foundation
 
 struct ProductAdapter {
-    
     enum ProductType {
         case cash
         case product
         case spotlight
     }
-    
     let name: String
     let imageURL: String
     let productDescription: String
