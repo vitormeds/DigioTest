@@ -23,3 +23,5 @@
 
 // CustomModal
 "CustomModal.buttonTitle" = "Recarregar";
+"CustomModal.errorTitle" = "Ocorreu um erro inesperado";
+"CustomModal.errorDescription" = "Ocorreu um erro de rede por favor tente novamente mais tarde";

@@ -28,6 +28,10 @@ internal enum DigioTestStrings {
   internal enum CustomModal {
     /// Recarregar
     internal static let buttonTitle = DigioTestStrings.tr("Localizable", "CustomModal.buttonTitle", fallback: "Recarregar")
+    /// Ocorreu um erro de rede por favor tente novamente mais tarde
+    internal static let errorDescription = DigioTestStrings.tr("Localizable", "CustomModal.errorDescription", fallback: "Ocorreu um erro de rede por favor tente novamente mais tarde")
+    /// Ocorreu um erro inesperado
+    internal static let errorTitle = DigioTestStrings.tr("Localizable", "CustomModal.errorTitle", fallback: "Ocorreu um erro inesperado")
   }
   internal enum Header {
     /// Olá, %@

@@ -52,9 +52,6 @@ class CustomModalViewController: UIViewController {
         return view
     }()
     let defaultHeight: CGFloat = 200
-    let dismissibleHeight: CGFloat = 100
-    let maximumContainerHeight: CGFloat = UIScreen.main.bounds.height - 64
-    var currentContainerHeight: CGFloat = 200
     var containerViewHeightConstraint: NSLayoutConstraint?
     var containerViewBottomConstraint: NSLayoutConstraint?
     var reloadAction: () -> Void
@@ -68,13 +65,6 @@ class CustomModalViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
-        // tap gesture on dimmed view to dismiss
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleCloseAction))
-        dimmedView.addGestureRecognizer(tapGesture)
-        setupPanGesture()
-    }
-    @objc func handleCloseAction() {
-        animateDismissView()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -115,47 +105,6 @@ class CustomModalViewController: UIViewController {
                                                                               constant: defaultHeight)
         containerViewHeightConstraint?.isActive = true
         containerViewBottomConstraint?.isActive = true
-    }
-    func setupPanGesture() {
-        let panGesture = UIPanGestureRecognizer(target: self,
-                                                action: #selector(self.handlePanGesture(gesture:)))
-        panGesture.delaysTouchesBegan = false
-        panGesture.delaysTouchesEnded = false
-        view.addGestureRecognizer(panGesture)
-    }
-    @objc func handlePanGesture(gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: view)
-        let isDraggingDown = translation.y > 0
-        let newHeight = currentContainerHeight - translation.y
-        switch gesture.state {
-        case .changed:
-            if newHeight < maximumContainerHeight {
-                containerViewHeightConstraint?.constant = newHeight
-                view.layoutIfNeeded()
-            }
-        case .ended:
-            if newHeight < dismissibleHeight {
-                self.animateDismissView()
-            } else if newHeight < defaultHeight {
-                animateContainerHeight(defaultHeight)
-            } else if newHeight < maximumContainerHeight && isDraggingDown {
-                animateContainerHeight(defaultHeight)
-            } else if newHeight > defaultHeight && !isDraggingDown {
-                animateContainerHeight(maximumContainerHeight)
-            }
-        default:
-            break
-        }
-    }
-    func animateContainerHeight(_ height: CGFloat) {
-        UIView.animate(withDuration: 0.4) {
-            // Update container height
-            self.containerViewHeightConstraint?.constant = height
-            // Call this to trigger refresh constraint
-            self.view.layoutIfNeeded()
-        }
-        // Save current height
-        currentContainerHeight = height
     }
     func animatePresentContainer() {
         UIView.animate(withDuration: 0.3) {

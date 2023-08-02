@@ -11,12 +11,13 @@ protocol HomeViewModelDelegate: AnyObject {
     func getHomeData()
     var homeData: HomeData? { get set }
     func openDetail(homeData: HomeData)
-    func setupError(error: Error)
+    func setupError()
 }
 
 protocol HomeViewModelToViewDelegate: AnyObject {
     func loadSucess()
-    func loadError(error: Error)
+    func loadError()
+    func setupLoading(play: Bool)
 }
 
 class HomeViewModel: HomeViewModelDelegate {
@@ -33,14 +34,17 @@ class HomeViewModel: HomeViewModelDelegate {
         homeService.getHomeData { result in
             self.homeData = result
             self.homeViewDelegate?.loadSucess()
-        } error: { error in
-            self.homeViewDelegate?.loadError(error: error)
+        } error: { _ in
+            self.homeViewDelegate?.loadError()
         }
     }
     func openDetail(homeData: HomeData) {
         coordinatorDelegate?.openDetail(homeData: homeData)
     }
-    func setupError(error: Error) {
-        coordinatorDelegate?.openError(error: error, reloadAction: getHomeData)
+    func setupError() {
+        coordinatorDelegate?.openError(reloadAction: {
+            self.homeViewDelegate?.setupLoading(play: true)
+            self.getHomeData()
+        })
     }
 }
