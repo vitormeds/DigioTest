@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Nuke
 
 class CashTableViewCell: UITableViewCell {
     let titleLabel: UILabel = {
@@ -51,14 +50,7 @@ class CashTableViewCell: UITableViewCell {
     }
     func setup(cash: Cash, openDetail: @escaping () -> Void) {
         setupText()
-        if let urlImg: URL = URL(string: cash.bannerURL) {
-            let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
-            let options = ImageLoadingOptions(
-                placeholder: DigioTestAssets.noImageIcon.image,
-                transition: .fadeIn(duration: 0.33)
-            )
-            Nuke.loadImage(with: request!, options: options, into: cashImageView)
-        }
+        cashImageView.loadImage(imageUrl: cash.bannerURL)
         self.openDetail = openDetail
         let tapAction = UITapGestureRecognizer(target: self, action: #selector(self.tapAction))
         addGestureRecognizer(tapAction)

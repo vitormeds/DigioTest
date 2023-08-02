@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Nuke
 
 protocol DetailViewToViewDelegate: AnyObject {
     func setup(product: ProductAdapter)
@@ -202,14 +201,7 @@ extension DetailView: DetailViewToViewDelegate {
         descriptionLabel.text = product.productDescription
         setupViews()
         setupContraints()
-        if let urlImg: URL = URL(string: product.imageURL) {
-            let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
-            let options = ImageLoadingOptions(
-                placeholder: DigioTestAssets.noImageIcon.image,
-                transition: .fadeIn(duration: 0.33)
-            )
-            Nuke.loadImage(with: request!, options: options, into: productImageView)
-        }
+        productImageView.loadImage(imageUrl: product.imageURL)
         switch product.type {
         case .cash:
             actionButton.setTitle(DigioTestStrings.Cash.buttonTitle, for: .normal)
