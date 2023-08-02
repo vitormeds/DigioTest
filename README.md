@@ -1,6 +1,6 @@
 ## DigioTest
 
-![DigioTest](https://github.com/vitormeds/DigioTest/assets/12155092/d6f19377-76cd-4088-94c7-9c1e5ccce5e7)
+![DigioTest](https://github.com/vitormeds/DigioTest/assets/12155092/40dd90ce-1b2a-4dd0-93af-b52d7ebc2e0a)
 
 ## Arquitetura
 
@@ -40,6 +40,10 @@ Responsavel por fazer a verificaçao da qualidade da escrita do codigo
 **SwiftGen**
 
 Gera classes para facilitar o acesso a Strings localizadas e Assets do projeto
+
+**iOSSnapshotTestCase**
+
+Biblioteca para implementar os testes de Snapshot
 
 ## Observações
 
