@@ -82,7 +82,7 @@ class CustomModalViewController: UIViewController {
         containerView.addSubview(contentStackView)
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            reloadButton.heightAnchor.constraint(equalToConstant: CGFloat(40))
+            reloadButton.heightAnchor.constraint(equalToConstant: Size.sizeButton)
         ])
         NSLayoutConstraint.activate([
             dimmedView.topAnchor.constraint(equalTo: view.topAnchor),

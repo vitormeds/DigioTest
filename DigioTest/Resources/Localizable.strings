@@ -16,6 +16,12 @@
 "Cash.title" = "digio Cash";
 "Cash.titleCashColor" = "Cash";
 "Cash.titleDigioColor" = "Digio";
+"Cash.buttonTitle" = "Transferir";
+
+// Products
+"Product.buttonTitle" = "Comprar";
+"Product.selectValue" = "Selecione o valor:";
+"Product.productValue" = "R$: %@";
 
 // Utils
 "Utils.back" = "Voltar";

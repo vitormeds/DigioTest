@@ -18,6 +18,8 @@ internal enum DigioTestStrings {
     internal static let loading = DigioTestStrings.tr("Localizable", "Animations.loading", fallback: "loading")
   }
   internal enum Cash {
+    /// Transferir
+    internal static let buttonTitle = DigioTestStrings.tr("Localizable", "Cash.buttonTitle", fallback: "Transferir")
     /// digio Cash
     internal static let title = DigioTestStrings.tr("Localizable", "Cash.title", fallback: "digio Cash")
     /// Cash
@@ -38,6 +40,16 @@ internal enum DigioTestStrings {
     internal static func title(_ p1: Any) -> String {
       return DigioTestStrings.tr("Localizable", "Header.title", String(describing: p1), fallback: "Olá, %@")
     }
+  }
+  internal enum Product {
+    /// Comprar
+    internal static let buttonTitle = DigioTestStrings.tr("Localizable", "Product.buttonTitle", fallback: "Comprar")
+    /// R$: %@
+    internal static func productValue(_ p1: Any) -> String {
+      return DigioTestStrings.tr("Localizable", "Product.productValue", String(describing: p1), fallback: "R$: %@")
+    }
+    /// Selecione o valor:
+    internal static let selectValue = DigioTestStrings.tr("Localizable", "Product.selectValue", fallback: "Selecione o valor:")
   }
   internal enum Utils {
     /// Voltar

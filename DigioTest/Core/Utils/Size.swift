@@ -17,4 +17,5 @@ enum Size {
     static let cardCashSize: CGFloat = 120
     static let productSize: CGFloat = 60
     static let productCollectionSize: CGFloat = 140
+    static let sizeButton: CGFloat = 40
 }

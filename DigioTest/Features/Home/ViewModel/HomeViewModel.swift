@@ -44,14 +44,16 @@ class HomeViewModel: HomeViewModelDelegate {
         let adapter = ProductAdapter(
             name: spotlight.name,
             imageURL: spotlight.bannerURL,
-            description: spotlight.description)
+            productDescription: spotlight.description,
+            type: .spotlight)
         coordinatorDelegate?.openDetail(product: adapter)
     }
     func openDetail(product: Product) {
         let adapter = ProductAdapter(
             name: product.name,
             imageURL: product.imageURL,
-            description: product.description)
+            productDescription: product.description,
+            type: .product)
         coordinatorDelegate?.openDetail(product: adapter)
     }
     func openDetail() {
@@ -61,7 +63,8 @@ class HomeViewModel: HomeViewModelDelegate {
         let adapter = ProductAdapter(
             name: homeData.cash.title,
             imageURL: homeData.cash.bannerURL,
-            description: homeData.cash.description)
+            productDescription: homeData.cash.description,
+            type: .cash)
         coordinatorDelegate?.openDetail(product: adapter)
     }
     func setupError() {
