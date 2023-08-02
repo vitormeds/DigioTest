@@ -19,7 +19,6 @@
 		F45161132A7879D100292DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161122A7879D100292DFF /* SceneDelegate.swift */; };
 		F451611A2A7879D200292DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45161192A7879D200292DFF /* Assets.xcassets */; };
 		F451611D2A7879D200292DFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F451611B2A7879D200292DFF /* LaunchScreen.storyboard */; };
-		F45161282A7879D200292DFF /* DigioTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161272A7879D200292DFF /* DigioTestTests.swift */; };
 		F45161322A7879D200292DFF /* DigioTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161312A7879D200292DFF /* DigioTestUITests.swift */; };
 		F45161342A7879D200292DFF /* DigioTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */; };
 		F4AEF4412A7A927000E4633E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F4AEF4402A7A927000E4633E /* loading.json */; };
@@ -27,6 +26,10 @@
 		F4AEF4462A7ACE3500E4633E /* ProductAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */; };
 		F4AEF4482A7AD47B00E4633E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4472A7AD47B00E4633E /* DetailView.swift */; };
 		F4AEF44A2A7AE44000E4633E /* ValueSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4492A7AE44000E4633E /* ValueSelectorView.swift */; };
+		F4AEF4512A7AE9C700E4633E /* HomeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF44C2A7AE9C700E4633E /* HomeViewControllerSpy.swift */; };
+		F4AEF4522A7AE9C700E4633E /* MainCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF44D2A7AE9C700E4633E /* MainCoordinatorSpy.swift */; };
+		F4AEF4542A7AE9C700E4633E /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF44F2A7AE9C700E4633E /* HomeTests.swift */; };
+		F4AEF4552A7AE9C700E4633E /* HomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4502A7AE9C700E4633E /* HomeServiceMock.swift */; };
 		F4DF011B2A787D2B00400924 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FC2A787D2A00400924 /* NetworkService.swift */; };
 		F4DF011C2A787D2B00400924 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FE2A787D2A00400924 /* Spacing.swift */; };
 		F4DF011D2A787D2B00400924 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FF2A787D2A00400924 /* Size.swift */; };
@@ -85,7 +88,6 @@
 		F451611C2A7879D200292DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F451611E2A7879D200292DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F45161232A7879D200292DFF /* DigioTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F45161272A7879D200292DFF /* DigioTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestTests.swift; sourceTree = "<group>"; };
 		F451612D2A7879D200292DFF /* DigioTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45161312A7879D200292DFF /* DigioTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestUITests.swift; sourceTree = "<group>"; };
 		F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -94,6 +96,10 @@
 		F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAdapter.swift; sourceTree = "<group>"; };
 		F4AEF4472A7AD47B00E4633E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F4AEF4492A7AE44000E4633E /* ValueSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueSelectorView.swift; sourceTree = "<group>"; };
+		F4AEF44C2A7AE9C700E4633E /* HomeViewControllerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpy.swift; sourceTree = "<group>"; };
+		F4AEF44D2A7AE9C700E4633E /* MainCoordinatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorSpy.swift; sourceTree = "<group>"; };
+		F4AEF44F2A7AE9C700E4633E /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		F4AEF4502A7AE9C700E4633E /* HomeServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServiceMock.swift; sourceTree = "<group>"; };
 		F4DF00FC2A787D2A00400924 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F4DF00FE2A787D2A00400924 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		F4DF00FF2A787D2A00400924 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
@@ -242,7 +248,7 @@
 		F45161262A7879D200292DFF /* DigioTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				F45161272A7879D200292DFF /* DigioTestTests.swift */,
+				F4AEF44B2A7AE9C700E4633E /* Home */,
 			);
 			path = DigioTestTests;
 			sourceTree = "<group>";
@@ -279,6 +285,17 @@
 				F4AEF4432A7AB50100E4633E /* CustomModalViewController.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F4AEF44B2A7AE9C700E4633E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEF44F2A7AE9C700E4633E /* HomeTests.swift */,
+				F4AEF44C2A7AE9C700E4633E /* HomeViewControllerSpy.swift */,
+				F4AEF44D2A7AE9C700E4633E /* MainCoordinatorSpy.swift */,
+				F4AEF4502A7AE9C700E4633E /* HomeServiceMock.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		F4DF00FA2A787D2A00400924 /* Core */ = {
@@ -699,7 +716,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45161282A7879D200292DFF /* DigioTestTests.swift in Sources */,
+				F4AEF4522A7AE9C700E4633E /* MainCoordinatorSpy.swift in Sources */,
+				F4AEF4512A7AE9C700E4633E /* HomeViewControllerSpy.swift in Sources */,
+				F4AEF4552A7AE9C700E4633E /* HomeServiceMock.swift in Sources */,
+				F4AEF4542A7AE9C700E4633E /* HomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
