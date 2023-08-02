@@ -18,6 +18,7 @@ class SpotlightTableViewCell: UITableViewCell {
         return collectionView
     }()
     var spotlights: [Spotlight] = []
+    var openDetail: ((Spotlight) -> Void)?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCollection()
@@ -41,8 +42,9 @@ class SpotlightTableViewCell: UITableViewCell {
             collectionView.heightAnchor.constraint(equalToConstant: Size.cardSize)
         ])
     }
-    func setup(spotlights: [Spotlight]) {
+    func setup(spotlights: [Spotlight], openDetail: @escaping (Spotlight) -> Void) {
         self.spotlights = spotlights
+        self.openDetail = openDetail
         collectionView.reloadData()
     }
     required public init?(coder aDecoder: NSCoder) {
@@ -68,6 +70,6 @@ extension SpotlightTableViewCell: UICollectionViewDataSource, UICollectionViewDe
         return CGSize(width: (window?.screen.bounds.width ?? 0) - Spacing.bigSpacing, height: Size.cardSize)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /* TODO */
+        openDetail?(self.spotlights[indexPath.item])
     }
 }

@@ -86,17 +86,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: SpotlightTableViewCell.description()) as! SpotlightTableViewCell
-            cell.setup(spotlights: homeData.spotlight ?? [])
+            cell.setup(spotlights: homeData.spotlight) { [weak self] spotlight in
+                self?.viewModel.openDetail(spotlight: spotlight)
+            }
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: CashTableViewCell.description()) as! CashTableViewCell
-            cell.setup(cash: homeData.cash)
+            cell.setup(cash: homeData.cash) { [weak self] in
+                self?.viewModel.openDetail()
+            }
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: ProductsTableViewCell.description()) as! ProductsTableViewCell
-            cell.setup(products: homeData.products)
+            cell.setup(products: homeData.products) { [weak self] product in
+                self?.viewModel.openDetail(product: product)
+            }
             return cell
         default:
             return UITableViewCell()

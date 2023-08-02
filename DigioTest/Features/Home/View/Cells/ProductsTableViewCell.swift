@@ -25,6 +25,7 @@ class ProductsTableViewCell: UITableViewCell {
         return collectionView
     }()
     var products: [Product] = []
+    var openDetail: ((Product) -> Void)?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCollection()
@@ -54,8 +55,9 @@ class ProductsTableViewCell: UITableViewCell {
             collectionView.heightAnchor.constraint(equalToConstant: Size.cardSize)
         ])
     }
-    func setup(products: [Product]) {
+    func setup(products: [Product], openDetail: @escaping (Product) -> Void) {
         self.products = products
+        self.openDetail = openDetail
         collectionView.reloadData()
     }
     required public init?(coder aDecoder: NSCoder) {
@@ -81,6 +83,6 @@ extension ProductsTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         return CGSize(width: Size.productCollectionSize, height: Size.productCollectionSize)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /* TODO */
+        openDetail?(self.products[indexPath.item])
     }
 }

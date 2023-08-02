@@ -28,7 +28,6 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
     }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
@@ -47,17 +46,13 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
             imageView.topAnchor.constraint(equalTo: conteinerView.topAnchor)
         ])
     }
-    
     func setupCell(image: String) {
         if let urlImg: URL = URL(string: image) {
             let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
             Nuke.loadImage(with: request!, into: imageView)
         }
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-

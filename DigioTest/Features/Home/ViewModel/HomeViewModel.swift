@@ -10,7 +10,9 @@ import Foundation
 protocol HomeViewModelDelegate: AnyObject {
     func getHomeData()
     var homeData: HomeData? { get set }
-    func openDetail(homeData: HomeData)
+    func openDetail(spotlight: Spotlight)
+    func openDetail(product: Product)
+    func openDetail()
     func setupError()
 }
 
@@ -38,8 +40,29 @@ class HomeViewModel: HomeViewModelDelegate {
             self.homeViewDelegate?.loadError()
         }
     }
-    func openDetail(homeData: HomeData) {
-        coordinatorDelegate?.openDetail(homeData: homeData)
+    func openDetail(spotlight: Spotlight) {
+        let adapter = ProductAdapter(
+            name: spotlight.name,
+            imageURL: spotlight.bannerURL,
+            description: spotlight.description)
+        coordinatorDelegate?.openDetail(product: adapter)
+    }
+    func openDetail(product: Product) {
+        let adapter = ProductAdapter(
+            name: product.name,
+            imageURL: product.imageURL,
+            description: product.description)
+        coordinatorDelegate?.openDetail(product: adapter)
+    }
+    func openDetail() {
+        guard let homeData = homeData else {
+            return
+        }
+        let adapter = ProductAdapter(
+            name: homeData.cash.title,
+            imageURL: homeData.cash.bannerURL,
+            description: homeData.cash.description)
+        coordinatorDelegate?.openDetail(product: adapter)
     }
     func setupError() {
         coordinatorDelegate?.openError(reloadAction: {

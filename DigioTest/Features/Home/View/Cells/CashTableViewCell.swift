@@ -22,6 +22,7 @@ class CashTableViewCell: UITableViewCell {
         cashImageView.layer.cornerRadius = 15
         return cashImageView
     }()
+    var openDetail: (() -> Void)?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
@@ -43,12 +44,15 @@ class CashTableViewCell: UITableViewCell {
             cashImageView.heightAnchor.constraint(equalToConstant: Size.cardCashSize)
         ])
     }
-    func setup(cash: Cash) {
+    func setup(cash: Cash, openDetail: @escaping () -> Void) {
         setupText()
         if let urlImg: URL = URL(string: cash.bannerURL) {
             let request: ImageRequest? = ImageRequest(urlRequest: URLRequest(url: urlImg))
             Nuke.loadImage(with: request!, into: cashImageView)
         }
+        self.openDetail = openDetail
+        let tapAction = UITapGestureRecognizer(target: self, action: #selector(self.tapAction))
+        addGestureRecognizer(tapAction)
     }
     func setupText() {
         let rangeDigio = (DigioTestStrings.Cash.title as NSString).range(of: DigioTestStrings.Cash.titleDigioColor)
@@ -59,6 +63,10 @@ class CashTableViewCell: UITableViewCell {
         attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: rangeDigio)
         attributedString.addAttribute(.foregroundColor, value: UIColor.gray, range: rangeCash)
         titleLabel.attributedText = attributedString
+    }
+    @objc
+    func tapAction() {
+        openDetail?()
     }
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
