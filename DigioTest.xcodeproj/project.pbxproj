@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1279FEB05CAFF785669D6165 /* Pods_DigioTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC92098A41F0ED5D6906D9D /* Pods_DigioTestTests.framework */; };
 		39247DB9F64DDCF91068A08F /* Pods_DigioTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB7B7DDAA82CAD0AD39101B /* Pods_DigioTest.framework */; };
 		9404EEB5B8FF120243D3AE21 /* Pods_DigioTest_DigioTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1497A5570B6FA3F976BE45C4 /* Pods_DigioTest_DigioTestUITests.framework */; };
-		B460A201CE1BFD3E4D819D4A /* Pods_DigioTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89657226A339555F7C4D711C /* Pods_DigioTestTests.framework */; };
 		F427AA0F2A7881F00087D2A8 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427AA0C2A7881F00087D2A8 /* DetailViewModel.swift */; };
 		F427AA102A7881F00087D2A8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427AA0E2A7881F00087D2A8 /* DetailViewController.swift */; };
 		F427AA132A7883790087D2A8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F427AA122A7883790087D2A8 /* Localizable.strings */; };
@@ -29,6 +29,7 @@
 		F4AEF4522A7AE9C700E4633E /* MainCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF44D2A7AE9C700E4633E /* MainCoordinatorSpy.swift */; };
 		F4AEF4542A7AE9C700E4633E /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF44F2A7AE9C700E4633E /* HomeTests.swift */; };
 		F4AEF4552A7AE9C700E4633E /* HomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4502A7AE9C700E4633E /* HomeServiceMock.swift */; };
+		F4AEF4572A7B035C00E4633E /* HomeSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4562A7B035C00E4633E /* HomeSnapshotTests.swift */; };
 		F4DF011B2A787D2B00400924 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FC2A787D2A00400924 /* NetworkService.swift */; };
 		F4DF011C2A787D2B00400924 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FE2A787D2A00400924 /* Spacing.swift */; };
 		F4DF011D2A787D2B00400924 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FF2A787D2A00400924 /* Size.swift */; };
@@ -67,13 +68,15 @@
 
 /* Begin PBXFileReference section */
 		1497A5570B6FA3F976BE45C4 /* Pods_DigioTest_DigioTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigioTest_DigioTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		245B789F6EBAEA1E4DDC5369 /* Pods-DigioTest-DigioTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTest-DigioTestTests.release.xcconfig"; path = "Target Support Files/Pods-DigioTest-DigioTestTests/Pods-DigioTest-DigioTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		6BB7B7DDAA82CAD0AD39101B /* Pods_DigioTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigioTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		752710D93CF94C5CB953CBFF /* Pods-DigioTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTest.debug.xcconfig"; path = "Target Support Files/Pods-DigioTest/Pods-DigioTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7EB6F179844E05F2A954A7C3 /* Pods-DigioTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DigioTestTests/Pods-DigioTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80FDA02B312C2DD46ACF57F9 /* Pods-DigioTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTestTests.release.xcconfig"; path = "Target Support Files/Pods-DigioTestTests/Pods-DigioTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		89657226A339555F7C4D711C /* Pods_DigioTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigioTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70A26E6131C666CF544CD09 /* Pods-DigioTest-DigioTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTest-DigioTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-DigioTest-DigioTestUITests/Pods-DigioTest-DigioTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8065A0D560D2DBD019B3311 /* Pods-DigioTest-DigioTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTest-DigioTestUITests.release.xcconfig"; path = "Target Support Files/Pods-DigioTest-DigioTestUITests/Pods-DigioTest-DigioTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DAC92098A41F0ED5D6906D9D /* Pods_DigioTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigioTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E68B8CBF8D2FEB8480059474 /* Pods-DigioTest-DigioTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTest-DigioTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DigioTest-DigioTestTests/Pods-DigioTest-DigioTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1EB84E4952F16C44656B819 /* Pods-DigioTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigioTest.release.xcconfig"; path = "Target Support Files/Pods-DigioTest/Pods-DigioTest.release.xcconfig"; sourceTree = "<group>"; };
 		F427AA0C2A7881F00087D2A8 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		F427AA0E2A7881F00087D2A8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		F4AEF44D2A7AE9C700E4633E /* MainCoordinatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorSpy.swift; sourceTree = "<group>"; };
 		F4AEF44F2A7AE9C700E4633E /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		F4AEF4502A7AE9C700E4633E /* HomeServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServiceMock.swift; sourceTree = "<group>"; };
+		F4AEF4562A7B035C00E4633E /* HomeSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSnapshotTests.swift; sourceTree = "<group>"; };
 		F4DF00FC2A787D2A00400924 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F4DF00FE2A787D2A00400924 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		F4DF00FF2A787D2A00400924 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
@@ -130,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B460A201CE1BFD3E4D819D4A /* Pods_DigioTestTests.framework in Frameworks */,
+				1279FEB05CAFF785669D6165 /* Pods_DigioTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +158,8 @@
 				C8065A0D560D2DBD019B3311 /* Pods-DigioTest-DigioTestUITests.release.xcconfig */,
 				7EB6F179844E05F2A954A7C3 /* Pods-DigioTestTests.debug.xcconfig */,
 				80FDA02B312C2DD46ACF57F9 /* Pods-DigioTestTests.release.xcconfig */,
+				E68B8CBF8D2FEB8480059474 /* Pods-DigioTest-DigioTestTests.debug.xcconfig */,
+				245B789F6EBAEA1E4DDC5369 /* Pods-DigioTest-DigioTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -163,7 +169,7 @@
 			children = (
 				6BB7B7DDAA82CAD0AD39101B /* Pods_DigioTest.framework */,
 				1497A5570B6FA3F976BE45C4 /* Pods_DigioTest_DigioTestUITests.framework */,
-				89657226A339555F7C4D711C /* Pods_DigioTestTests.framework */,
+				DAC92098A41F0ED5D6906D9D /* Pods_DigioTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 				F4AEF44C2A7AE9C700E4633E /* HomeViewControllerSpy.swift */,
 				F4AEF44D2A7AE9C700E4633E /* MainCoordinatorSpy.swift */,
 				F4AEF4502A7AE9C700E4633E /* HomeServiceMock.swift */,
+				F4AEF4562A7B035C00E4633E /* HomeSnapshotTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -432,6 +439,7 @@
 				F451611F2A7879D200292DFF /* Sources */,
 				F45161202A7879D200292DFF /* Frameworks */,
 				F45161212A7879D200292DFF /* Resources */,
+				B6257FB0C57355B680C4B9F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -635,6 +643,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigioTest-DigioTestUITests/Pods-DigioTest-DigioTestUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B6257FB0C57355B680C4B9F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigioTestTests/Pods-DigioTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigioTestTests/Pods-DigioTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigioTestTests/Pods-DigioTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F4A4E59E2A78891200753125 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -715,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AEF4522A7AE9C700E4633E /* MainCoordinatorSpy.swift in Sources */,
+				F4AEF4572A7B035C00E4633E /* HomeSnapshotTests.swift in Sources */,
 				F4AEF4512A7AE9C700E4633E /* HomeViewControllerSpy.swift in Sources */,
 				F4AEF4552A7AE9C700E4633E /* HomeServiceMock.swift in Sources */,
 				F4AEF4542A7AE9C700E4633E /* HomeTests.swift in Sources */,
