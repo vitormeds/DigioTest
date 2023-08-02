@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "D02135CB-ED18-4E51-8151-9E5F5BC4D9A4",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DigioTest.xcodeproj",
+        "identifier" : "F45161222A7879D200292DFF",
+        "name" : "DigioTestTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DigioTest.xcodeproj",
+        "identifier" : "F451612C2A7879D200292DFF",
+        "name" : "DigioTestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
