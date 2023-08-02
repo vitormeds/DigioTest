@@ -10,7 +10,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum DigioTestStrings {
+  internal enum Animations {
+    /// Localizable.strings
+    ///   DigioTest
+    /// 
+    ///   Created by Vitor Mendes on 31/07/23.
+    internal static let loading = DigioTestStrings.tr("Localizable", "Animations.loading", fallback: "loading")
+  }
   internal enum Cash {
+    /// Transferir
+    internal static let buttonTitle = DigioTestStrings.tr("Localizable", "Cash.buttonTitle", fallback: "Transferir")
     /// digio Cash
     internal static let title = DigioTestStrings.tr("Localizable", "Cash.title", fallback: "digio Cash")
     /// Cash
@@ -18,14 +27,29 @@ internal enum DigioTestStrings {
     /// Digio
     internal static let titleDigioColor = DigioTestStrings.tr("Localizable", "Cash.titleDigioColor", fallback: "Digio")
   }
+  internal enum CustomModal {
+    /// Recarregar
+    internal static let buttonTitle = DigioTestStrings.tr("Localizable", "CustomModal.buttonTitle", fallback: "Recarregar")
+    /// Ocorreu um erro de rede por favor tente novamente mais tarde
+    internal static let errorDescription = DigioTestStrings.tr("Localizable", "CustomModal.errorDescription", fallback: "Ocorreu um erro de rede por favor tente novamente mais tarde")
+    /// Ocorreu um erro inesperado
+    internal static let errorTitle = DigioTestStrings.tr("Localizable", "CustomModal.errorTitle", fallback: "Ocorreu um erro inesperado")
+  }
   internal enum Header {
-    /// Localizable.strings
-    ///   DigioTest
-    /// 
-    ///   Created by Vitor Mendes on 31/07/23.
+    /// Olá, %@
     internal static func title(_ p1: Any) -> String {
       return DigioTestStrings.tr("Localizable", "Header.title", String(describing: p1), fallback: "Olá, %@")
     }
+  }
+  internal enum Product {
+    /// Comprar
+    internal static let buttonTitle = DigioTestStrings.tr("Localizable", "Product.buttonTitle", fallback: "Comprar")
+    /// R$: %@
+    internal static func productValue(_ p1: Any) -> String {
+      return DigioTestStrings.tr("Localizable", "Product.productValue", String(describing: p1), fallback: "R$: %@")
+    }
+    /// Selecione o valor:
+    internal static let selectValue = DigioTestStrings.tr("Localizable", "Product.selectValue", fallback: "Selecione o valor:")
   }
   internal enum Utils {
     /// Voltar

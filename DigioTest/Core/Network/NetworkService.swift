@@ -11,7 +11,9 @@ import Alamofire
 class NetworkService {
     static private var alamoFireManager: Session? = {
         let configuration = URLSessionConfiguration.default
-        configuration.requestCachePolicy = .useProtocolCachePolicy
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
+        configuration.timeoutIntervalForRequest = 10
+        configuration.timeoutIntervalForResource = 10
         let alamoFireManager = Alamofire.Session(configuration: configuration)
         return alamoFireManager
     }()
@@ -23,9 +25,8 @@ class NetworkService {
                                     error: @escaping (Error) -> Void) {
         alamoFireManager?.request(requestUrl,
                                   method: method,
-                                  parameters: getParameters(),
-                                  encoding: URLEncoding.default,
-                                  headers: getHeaders()).response { response in
+                                  encoding: URLEncoding.default)
+            .response { response in
             switch response.result {
             case .success:
                 do {
@@ -40,20 +41,5 @@ class NetworkService {
                 return
             }
         }
-    }
-
-    static func getParameters() -> [String:Any]? {
-        return [
-                "type" : "public",
-                "q" : "chicken",
-                "app_id" : "935a7765",
-                "app_key" : "715c72ad38c481e2d1c1878848c89623"
-        ]
-    }
-    static func getHeaders() -> HTTPHeaders {
-        return HTTPHeaders([
-                "Accept" : "application/json",
-                "Accept-Language" : "en"
-        ])
     }
 }

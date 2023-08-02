@@ -8,7 +8,8 @@
 import UIKit
 
 protocol MainCoordinatorDelegate: AnyObject {
-    func openDetail(homeData: HomeData)
+    func openDetail(product: ProductAdapter)
+    func openError(reloadAction: @escaping () -> Void)
 }
 
 class MainCoordinator: Coordinator {
@@ -27,12 +28,20 @@ class MainCoordinator: Coordinator {
 }
 
 extension MainCoordinator: MainCoordinatorDelegate {
-    func openDetail(homeData: HomeData) {
+    func openDetail(product: ProductAdapter) {
         let backButton = UIBarButtonItem()
         backButton.title = DigioTestStrings.Utils.back
         navigationController.navigationBar.topItem?.backBarButtonItem = backButton
-        let viewModel = DetailViewModel(homeData: homeData)
+        let viewModel = DetailViewModel(product: product)
         let viewController = DetailViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
+    }
+    func openError(reloadAction: @escaping () -> Void) {
+        let viewController = CustomModalViewController(
+            errorTitle: DigioTestStrings.CustomModal.errorTitle,
+            errorDescription: DigioTestStrings.CustomModal.errorDescription,
+            reloadAction: reloadAction)
+        viewController.modalPresentationStyle = .overCurrentContext
+        navigationController.present(viewController, animated: false)
     }
 }

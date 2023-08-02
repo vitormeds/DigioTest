@@ -22,6 +22,11 @@
 		F45161282A7879D200292DFF /* DigioTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161272A7879D200292DFF /* DigioTestTests.swift */; };
 		F45161322A7879D200292DFF /* DigioTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161312A7879D200292DFF /* DigioTestUITests.swift */; };
 		F45161342A7879D200292DFF /* DigioTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */; };
+		F4AEF4412A7A927000E4633E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F4AEF4402A7A927000E4633E /* loading.json */; };
+		F4AEF4442A7AB50100E4633E /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4432A7AB50100E4633E /* CustomModalViewController.swift */; };
+		F4AEF4462A7ACE3500E4633E /* ProductAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */; };
+		F4AEF4482A7AD47B00E4633E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4472A7AD47B00E4633E /* DetailView.swift */; };
+		F4AEF44A2A7AE44000E4633E /* ValueSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEF4492A7AE44000E4633E /* ValueSelectorView.swift */; };
 		F4DF011B2A787D2B00400924 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FC2A787D2A00400924 /* NetworkService.swift */; };
 		F4DF011C2A787D2B00400924 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FE2A787D2A00400924 /* Spacing.swift */; };
 		F4DF011D2A787D2B00400924 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF00FF2A787D2A00400924 /* Size.swift */; };
@@ -84,6 +89,11 @@
 		F451612D2A7879D200292DFF /* DigioTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45161312A7879D200292DFF /* DigioTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestUITests.swift; sourceTree = "<group>"; };
 		F45161332A7879D200292DFF /* DigioTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4AEF4402A7A927000E4633E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		F4AEF4432A7AB50100E4633E /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
+		F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAdapter.swift; sourceTree = "<group>"; };
+		F4AEF4472A7AD47B00E4633E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F4AEF4492A7AE44000E4633E /* ValueSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueSelectorView.swift; sourceTree = "<group>"; };
 		F4DF00FC2A787D2A00400924 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F4DF00FE2A787D2A00400924 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		F4DF00FF2A787D2A00400924 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
@@ -174,6 +184,8 @@
 		F427AA0D2A7881F00087D2A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4AEF4492A7AE44000E4633E /* ValueSelectorView.swift */,
+				F4AEF4472A7AD47B00E4633E /* DetailView.swift */,
 				F427AA0E2A7881F00087D2A8 /* DetailViewController.swift */,
 			);
 			path = View;
@@ -182,6 +194,7 @@
 		F427AA112A7883670087D2A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4AEF43F2A7A922000E4633E /* Animations */,
 				F4F842852A7938770034F504 /* Assets+Generated.swift */,
 				F427AA142A7883AA0087D2A8 /* Strings+Generated.swift */,
 				F427AA122A7883790087D2A8 /* Localizable.strings */,
@@ -252,9 +265,26 @@
 			path = Aplication;
 			sourceTree = "<group>";
 		};
+		F4AEF43F2A7A922000E4633E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEF4402A7A927000E4633E /* loading.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		F4AEF4422A7AB4EF00E4633E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEF4432A7AB50100E4633E /* CustomModalViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F4DF00FA2A787D2A00400924 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F4AEF4422A7AB4EF00E4633E /* Components */,
 				F4DF00FB2A787D2A00400924 /* Network */,
 				F4DF00FD2A787D2A00400924 /* Utils */,
 			);
@@ -311,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				F4DF01052A787D2A00400924 /* HomeData.swift */,
+				F4AEF4452A7ACE3500E4633E /* ProductAdapter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,6 +499,7 @@
 			files = (
 				F451611D2A7879D200292DFF /* LaunchScreen.storyboard in Resources */,
 				F427AA132A7883790087D2A8 /* Localizable.strings in Resources */,
+				F4AEF4412A7A927000E4633E /* loading.json in Resources */,
 				F451611A2A7879D200292DFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,16 +672,20 @@
 				F427AA172A7884AD0087D2A8 /* HomeView.swift in Sources */,
 				F4F8428F2A79A3550034F504 /* SpotlightCollectionViewCell.swift in Sources */,
 				F4F8428B2A7984250034F504 /* ProductsTableViewCell.swift in Sources */,
+				F4AEF4482A7AD47B00E4633E /* DetailView.swift in Sources */,
 				F4DF01242A787D2B00400924 /* HomeService.swift in Sources */,
+				F4AEF4462A7ACE3500E4633E /* ProductAdapter.swift in Sources */,
 				F4F842892A79841C0034F504 /* SpotlightTableViewCell.swift in Sources */,
 				F4DF01272A787D2B00400924 /* MainCoordinator.swift in Sources */,
 				F427AA0F2A7881F00087D2A8 /* DetailViewModel.swift in Sources */,
 				F4DF01282A787D2B00400924 /* Coordinator.swift in Sources */,
+				F4AEF44A2A7AE44000E4633E /* ValueSelectorView.swift in Sources */,
 				F427AA102A7881F00087D2A8 /* DetailViewController.swift in Sources */,
 				F4F8428D2A79842D0034F504 /* CashTableViewCell.swift in Sources */,
 				F427AA152A7883AA0087D2A8 /* Strings+Generated.swift in Sources */,
 				F4DF011C2A787D2B00400924 /* Spacing.swift in Sources */,
 				F4DF011B2A787D2B00400924 /* NetworkService.swift in Sources */,
+				F4AEF4442A7AB50100E4633E /* CustomModalViewController.swift in Sources */,
 				F4DF011D2A787D2B00400924 /* Size.swift in Sources */,
 				F4DF011E2A787D2B00400924 /* HomeViewModel.swift in Sources */,
 				F4F842952A79C1540034F504 /* UIViewExtension.swift in Sources */,

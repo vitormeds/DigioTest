@@ -6,6 +6,9 @@
   
 */
 
+// Animations
+"Animations.loading" = "loading";
+
 // Header
 "Header.title" = "Olá, %@";
 
@@ -13,7 +16,18 @@
 "Cash.title" = "digio Cash";
 "Cash.titleCashColor" = "Cash";
 "Cash.titleDigioColor" = "Digio";
+"Cash.buttonTitle" = "Transferir";
+
+// Products
+"Product.buttonTitle" = "Comprar";
+"Product.selectValue" = "Selecione o valor:";
+"Product.productValue" = "R$: %@";
 
 // Utils
 "Utils.back" = "Voltar";
 "Utils.homeApi" = "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/";
+
+// CustomModal
+"CustomModal.buttonTitle" = "Recarregar";
+"CustomModal.errorTitle" = "Ocorreu um erro inesperado";
+"CustomModal.errorDescription" = "Ocorreu um erro de rede por favor tente novamente mais tarde";
