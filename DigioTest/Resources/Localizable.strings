@@ -6,6 +6,9 @@
   
 */
 
+// Animations
+"Animations.loading" = "loading";
+
 // Header
 "Header.title" = "Olá, %@";
 
@@ -17,3 +20,6 @@
 // Utils
 "Utils.back" = "Voltar";
 "Utils.homeApi" = "https://7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com/sandbox/products/";
+
+// CustomModal
+"CustomModal.buttonTitle" = "Recarregar";

@@ -64,6 +64,7 @@ extension HomeViewController: HomeViewModelToViewDelegate {
     }
     func loadError(error: Error) {
         delegateToView.setupLoading(play: false)
+        viewModel.setupError(error: error)
     }
 }
 

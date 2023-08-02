@@ -11,6 +11,7 @@ protocol HomeViewModelDelegate: AnyObject {
     func getHomeData()
     var homeData: HomeData? { get set }
     func openDetail(homeData: HomeData)
+    func setupError(error: Error)
 }
 
 protocol HomeViewModelToViewDelegate: AnyObject {
@@ -38,5 +39,8 @@ class HomeViewModel: HomeViewModelDelegate {
     }
     func openDetail(homeData: HomeData) {
         coordinatorDelegate?.openDetail(homeData: homeData)
+    }
+    func setupError(error: Error) {
+        coordinatorDelegate?.openError(error: error, reloadAction: getHomeData)
     }
 }

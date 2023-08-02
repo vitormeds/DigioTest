@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol HomeControllerToViewDelegate: AnyObject {
     func setupValues(name: String)
@@ -28,6 +29,14 @@ class HomeView: UIView {
         tableView.allowsSelection = false
         return tableView
     }()
+    private let loadingView: LottieAnimationView = {
+        let loadingView = LottieAnimationView(name: DigioTestStrings.Animations.loading)
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.loopMode = .loop
+        loadingView.isHidden = true
+        loadingView.play()
+        return loadingView
+    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -40,6 +49,7 @@ class HomeView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(headerView)
         addSubview(tableView)
+        addSubview(loadingView)
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: topAnchor),
             headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -52,6 +62,12 @@ class HomeView: UIView {
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        NSLayoutConstraint.activate([
+            loadingView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            loadingView.widthAnchor.constraint(equalToConstant: Size.loadingSize),
+            loadingView.heightAnchor.constraint(equalToConstant: Size.loadingSize)
+        ])
     }
 }
 
@@ -60,7 +76,7 @@ extension HomeView: HomeControllerToViewDelegate {
         headerView.setupValues(name: name)
     }
     func setupLoading(play: Bool) {
-        /* TODO */
+        loadingView.isHidden = !play
     }
     func reloadView() {
         tableView.reloadData()

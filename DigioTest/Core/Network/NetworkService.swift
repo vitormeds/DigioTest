@@ -11,7 +11,7 @@ import Alamofire
 class NetworkService {
     static private var alamoFireManager: Session? = {
         let configuration = URLSessionConfiguration.default
-        configuration.requestCachePolicy = .useProtocolCachePolicy
+        configuration.requestCachePolicy = .reloadRevalidatingCacheData
         let alamoFireManager = Alamofire.Session(configuration: configuration)
         return alamoFireManager
     }()

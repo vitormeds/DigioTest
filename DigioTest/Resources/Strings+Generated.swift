@@ -10,6 +10,13 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum DigioTestStrings {
+  internal enum Animations {
+    /// Localizable.strings
+    ///   DigioTest
+    /// 
+    ///   Created by Vitor Mendes on 31/07/23.
+    internal static let loading = DigioTestStrings.tr("Localizable", "Animations.loading", fallback: "loading")
+  }
   internal enum Cash {
     /// digio Cash
     internal static let title = DigioTestStrings.tr("Localizable", "Cash.title", fallback: "digio Cash")
@@ -18,11 +25,12 @@ internal enum DigioTestStrings {
     /// Digio
     internal static let titleDigioColor = DigioTestStrings.tr("Localizable", "Cash.titleDigioColor", fallback: "Digio")
   }
+  internal enum CustomModal {
+    /// Recarregar
+    internal static let buttonTitle = DigioTestStrings.tr("Localizable", "CustomModal.buttonTitle", fallback: "Recarregar")
+  }
   internal enum Header {
-    /// Localizable.strings
-    ///   DigioTest
-    /// 
-    ///   Created by Vitor Mendes on 31/07/23.
+    /// Olá, %@
     internal static func title(_ p1: Any) -> String {
       return DigioTestStrings.tr("Localizable", "Header.title", String(describing: p1), fallback: "Olá, %@")
     }
