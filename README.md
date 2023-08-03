@@ -15,9 +15,9 @@ A arquitetura utilizada no projeto foi definida como MVVM-C. Segue esquema das c
 
 **View**: Camada de exibição exibe a interface do usuário do aplicativo e se comunica com o modelo de exibição para atualizar a interface.
 
-**Coordinator**: Responsavel por lidar com o fluxo de navegação do aplicativo.
+**Coordinator**: Responsável por lidar com o fluxo de navegação do aplicativo.
 
-A comunicação entre as camadas e feita atraves de protocolos.
+A comunicação entre as camadas e feita através de protocolos.
 
 ## Bibliotecas
 
@@ -27,7 +27,7 @@ Biblioteca escolhida para lidar com as chamadas para a API Rest.
 
 **Nuke**
 
-Responsavel por realizar o cache das imagens
+Responsável por realizar o cache das imagens
 
 **Lottie**
 
@@ -35,7 +35,7 @@ Utilizada em algumas animações do App.
 
 **SwiftLint**
 
-Responsavel por fazer a verificaçao da qualidade da escrita do codigo
+Responsável por fazer a verificação da qualidade da escrita do código
 
 **SwiftGen**
 
